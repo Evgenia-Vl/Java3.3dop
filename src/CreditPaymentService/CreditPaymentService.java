@@ -1,19 +1,13 @@
 package CreditPaymentService;
 
 public class CreditPaymentService {
-    public int calculate(double a, double b, double c) {
-
-        double amount = a;
-
-        double period = b;
-
-        double interestRate = c;
+    public int calculate(double amount, double period, double interestRate) {
 
         double rateMonth = interestRate / 100 / 12;
 
         double calcOne = 1 + rateMonth;
 
-        double numerator = Math.pow(calcOne, b);
+        double numerator = Math.pow(calcOne, period);
 
         double denominator = numerator - 1;
 
